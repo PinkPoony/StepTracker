@@ -25,6 +25,8 @@ class MonthData {
         return maxSteps;
     }
 
+    // Green
+    // Метод работает при всех возможных случаев и не дает сбоев! Молодец :)
     int bestSeriesFromMonth(int goalByStepsPerDay) {
         int currentSeries = 0;
         int finalSeries = 0;

@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+// Green
+// Очень здорово, что ни в одном классе нет лишних комментариев и лишних импортов
+// Код действительно выглядит чисто!
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -13,6 +17,14 @@ public class Main {
             } else if (command == 2) {
                 stepTracker.changesStepGoal();
             } else if (command == 3) {
+                // Green
+                // Замечательно, что постарался и сделал отдельное меню для статистики, молодец! :)
+
+                // Yellow
+                // очень много вложенного кода получается в 3-ей команде
+                // Было бы здорово вынести все это дополнительно меню в отдельный метод в этом же классе
+                // Кроме улучшения читаемости кода, можно будет использовать переменную
+                // с именем command в другом методе
                 while (true) {
                     printStaticMenu();
                     int staticCommand = scanner.nextInt();

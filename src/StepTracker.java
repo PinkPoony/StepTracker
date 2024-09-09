@@ -35,8 +35,14 @@ class StepTracker {
     void changesStepGoal() {
         System.out.println("Введите цель шагов на день");
         int newGoal = scanner.nextInt();
+        // Red
+        // Пользователь, к сожалению, не сможет вернуть цель к значению 10000 ни при каких обстоятельствах
+        // А хотелось бы!)
         if (newGoal == 10000) {
             System.out.println("Эта цель стоит по умолчанию");
+        // Red
+        // Очень странное условие
+        // Оно сработает только при newGoal = 0
         } else if ((newGoal <= 10000) && (newGoal == 0)) {
             System.out.println("К сожалению Ваша цель не подходит, попробуйте выбрать другую");
         } else {
@@ -46,6 +52,12 @@ class StepTracker {
         }
     }
 
+    // Red
+    // Очень много повторяющего кода в методах ниже
+    // Общую часть с получением и проверкой нужного месяца можно вынести в отдельный метод
+
+    // Red
+    // Программа вылетит с исключением, если пользователь введет некорректный месяц
     void printDays() {
         System.out.println("Введите номер месяца (от 1 до 12)");
         int monthNumber = scanner.nextInt();
@@ -53,6 +65,8 @@ class StepTracker {
         month.printDaysAndStepsFromMonth();
     }
 
+    // Red
+    // Программа вылетит с исключением, если пользователь введет некорректный месяц
     void sumSteps() {
         System.out.println("Введите номер месяца (от 1 до 12)");
         int monthNumber = scanner.nextInt();
@@ -61,6 +75,8 @@ class StepTracker {
         System.out.println(sumSteps + " - именно столько шагов вы прошли за этот месяц!");
     }
 
+    // Red
+    // Программа вылетит с исключением, если пользователь введет некорректный месяц
     void maxSteps() {
         System.out.println("Введите номер месяца (от 1 до 12)");
         int monthNumber = scanner.nextInt();
@@ -69,6 +85,8 @@ class StepTracker {
         System.out.println(maxSteps + " - ваш максимум за этот месяц!");
     }
 
+    // Red
+    // Программа вылетит с исключением, если пользователь введет некорректный месяц
     void bestSeries() {
         System.out.println("Введите номер месяца (от 1 до 12)");
         int monthNumber = scanner.nextInt();
@@ -77,6 +95,8 @@ class StepTracker {
         System.out.println(bestSeries + " - ваша лучшая серия за месяц!");
     }
 
+    // Red
+    // Программа вылетит с исключением, если пользователь введет некорректный месяц
     void converterToKm() {
         System.out.println("Введите номер месяца (от 1 до 12)");
         int monthNumber = scanner.nextInt();
@@ -85,6 +105,8 @@ class StepTracker {
         System.out.println(kilometrs + "километров");
     }
 
+    // Red
+    // Программа вылетит с исключением, если пользователь введет некорректный месяц
     void converterToKilocallories() {
         System.out.println("Введите номер месяца (от 1 до 12)");
         int monthNumber = scanner.nextInt();
